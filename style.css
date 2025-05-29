@@ -1,0 +1,287 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+.Title {
+    font-family:monospace;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    color: orange;
+    text-shadow: 0px 0px 3px black;
+}
+
+
+.todo {
+    border-radius: 20px;
+    border: solid 2px  orange;
+    box-shadow: 0px 0px 10px orange;
+    margin-top: 60px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+#list {
+    font-family:cursive;
+    color: orange;
+    display: grid;
+    text-align: left;
+}
+
+
+.remove {
+    height: 25px;
+    border: none;
+    background-color: chocolate;
+    border-radius: 15px;
+    color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 15px;
+}
+    
+.remove:hover {
+    background-color: orange;
+}
+
+.input {
+    width: 230px;
+    height: 25px;
+    margin-top: 20px;
+    border: solid 2px yellow;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+}   
+
+.Add-Task {
+    border: none;
+    height: 30px;
+    background-color: orange;
+    border-radius: 8px;
+    font-family: monospace;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.Add-Task:hover {
+    background-color: yellow;
+}
+
+#buttons {
+    display: grid;   
+    margin-top: 5px;          
+}
+
+
+ol {
+    font-family: cursive;
+    position: relative;
+    padding-top: 20px;
+    font-size: 20px;
+
+}
+
+ol li {
+    border-bottom: solid 1px orange;
+}
+
+.wall {
+    width: 100%;
+    position: relative;
+    bottom: 550px;
+    z-index: -100;
+}
+
+.bus {
+    position: relative;
+    bottom: 30px;
+    animation: busmove 15s infinite;
+    overflow: hidden;
+
+}
+
+@keyframes busmove {
+    0% {
+        transform: translate(10%);
+    }
+
+    50% {
+        transform: translate(150%);
+    }
+
+    100% {
+        transform: translate(10%);
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    
+    .bus {
+        bottom: 62px;
+        overflow: hidden;
+    }
+
+    @keyframes busmove {
+    0% {
+        transform: translate(10%);
+    }
+
+    50% {
+        transform: translate(130%);
+    }
+
+    100% {
+        transform: translate(10%);
+    }
+}
+
+    .wall {
+        max-width: 100%;
+        overflow: hidden;
+        bottom: 500px;
+    }
+
+    .Title {
+        font-size: 50px;
+    }
+
+    .input {
+        width: 240px;
+        height: 25px;
+        font-size: 30px;
+    }
+
+    ol {
+        font-size: 26px;
+    }
+
+    .Add-Task {
+        font-size: 25px;
+        height: 30px
+    }
+
+    .remove {
+        font-size: 25px;
+        height: 35px;
+    }
+
+
+}
+
+
+
+@media (max-width: 768px) {
+    .Title {
+        font-size: 40px;
+    }
+
+    .todo {
+        width: 450px;
+    }
+
+    .bus {
+        bottom: 146px;
+    }
+
+    @keyframes busmove {
+    0% {
+        transform: translate(5%);
+    }
+
+    50% {
+        transform: translate(100%);
+    }
+
+    100% {
+        transform: translate(5%);
+    }
+}}
+
+@media (max-width: 610px) {
+    .bus {
+        bottom: 46px;
+        width: 400px;
+    }
+
+    .wall {
+        bottom: 320px;
+    }
+}
+
+
+@media (max-width: 518px) {
+    .Title {
+        font-size: 35px;
+    }
+
+    ol {
+        font-size: 20px;
+    }
+
+    .todo {
+        width: 350px;
+    }
+}
+
+
+@media (max-width: 412px) {
+    .todo {
+        width: 300px;
+    }
+
+    .bus {
+        bottom: 30px;
+        width: 300px;
+    }
+
+    .wall {
+        position: relative;
+        bottom: 210px;
+    }
+
+    @keyframes busmove {
+    0% {
+        transform: translate(5%);
+    }
+
+    50% {
+        transform: translate(70%);
+    }
+
+    100% {
+        transform: translate(5%);
+    }
+}}
+
+@media (max-width: 375px) {
+    
+    .input {
+        width: 200px;
+        height: 20px;
+    }
+
+    .remove {
+        font-size: 20px;
+        height: 28px;
+    }
+
+    .todo {
+        width: 250px;
+    }
+
+}
